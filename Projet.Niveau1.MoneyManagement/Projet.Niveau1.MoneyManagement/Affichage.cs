@@ -1,5 +1,6 @@
 ﻿
 using static System.Console;
+using System;
 
 namespace Projet.Niveau1.MoneyManagement
 {
@@ -21,18 +22,22 @@ namespace Projet.Niveau1.MoneyManagement
         public static void DisplayMenu()
         {
             Afficher("----------------------------------------");
-            Afficher("Menu du logiciel");
+            AffichageCouleur("Menu du logiciel",ConsoleColor.Blue);
             Afficher("");
-            Afficher("1. Lister le détails des opérations");
-            Afficher("2. Ajouter une opération");
-            Afficher("3. Ajouter une opération régulière");
-            Afficher("4. Supprimer une opération");
-            Afficher("5. Vider le compte");
-            Afficher("6. Quitter le logiciel");
+            AffichageCouleur("1. Lister le détails des opérations", ConsoleColor.Blue);
+            AffichageCouleur("2. Ajouter une opération", ConsoleColor.Green);
+            AffichageCouleur("3. Ajouter une opération régulière", ConsoleColor.DarkMagenta);
+            AffichageCouleur("4. Supprimer une opération", ConsoleColor.Blue);
+            AffichageCouleur("5. Vider le compte", ConsoleColor.Blue);
+            AffichageCouleur("6. Quitter le logiciel", ConsoleColor.Blue);
             Afficher("----------------------------------------");
         }
         #endregion
-
+        public static void AffichageCouleur(string texte, ConsoleColor couleur)
+        {
+            ForegroundColor = couleur;
+            Afficher(texte);
+        }
         public static bool DemanderSiAutreOperation()
         {
             //TODO : Afficher un message

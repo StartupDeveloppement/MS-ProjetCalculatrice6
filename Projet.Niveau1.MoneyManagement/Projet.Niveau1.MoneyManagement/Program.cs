@@ -121,7 +121,7 @@ namespace Projet.Niveau1.MoneyManagement
             Affichage.Afficher("Date de l'opération : ");
             DateTime saisie = new DateTime();
             Affichage.Afficher("Montant de l'opération : ");
-            int montant = 100;
+            double montant = Convert.ToDouble(Console.ReadLine());
             Affichage.Afficher("Opération régulière (0 pour non, 1 pour oui)");
             bool regulier = true;
             Operation operationEnCours = new Operation(saisie, montant, regulier);
