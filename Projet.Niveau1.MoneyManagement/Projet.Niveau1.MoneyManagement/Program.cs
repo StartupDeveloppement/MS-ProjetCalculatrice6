@@ -120,10 +120,10 @@ namespace Projet.Niveau1.MoneyManagement
             Affichage.Afficher("----- Ajout d'une opération -----");
             Affichage.Afficher("Date de l'opération : ");
             string date = Convert.ToString(Console.ReadLine());
-            DateTime dt2 = DateTime.Parse(date, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AssumeLocal);
+            DateTime dt2 = DateTime.Parse(date);
             string dateFormat = dt2.ToString("d");
             Affichage.Afficher("Montant de l'opération : ");
-            double montant = Convert.ToDouble(Console.ReadLine());
+            double montant = Convert.ToDouble(Console.ReadLine().Replace(".",",");
             Affichage.Afficher("Opération régulière (0 pour non, 1 pour oui)");
             bool regulier = true;
             Operation operationEnCours = new Operation(dt2, montant, regulier);
