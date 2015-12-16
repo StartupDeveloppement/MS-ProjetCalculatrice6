@@ -22,14 +22,14 @@ namespace Projet.Niveau1.MoneyManagement
         public static void DisplayMenu()
         {
             Afficher("----------------------------------------");
-            AffichageCouleur("Menu du logiciel",ConsoleColor.Blue);
+            AffichageCouleur("Menu du logiciel",ConsoleColor.White);
             Afficher("");
             AffichageCouleur("1. Lister le détails des opérations", ConsoleColor.Blue);
             AffichageCouleur("2. Ajouter une opération", ConsoleColor.Green);
             AffichageCouleur("3. Ajouter une opération régulière", ConsoleColor.DarkMagenta);
-            AffichageCouleur("4. Supprimer une opération", ConsoleColor.Blue);
-            AffichageCouleur("5. Vider le compte", ConsoleColor.Blue);
-            AffichageCouleur("6. Quitter le logiciel", ConsoleColor.Blue);
+            AffichageCouleur("4. Supprimer une opération", ConsoleColor.Red);
+            AffichageCouleur("5. Vider le compte", ConsoleColor.DarkRed);
+            AffichageCouleur("6. Quitter le logiciel", ConsoleColor.White);
             Afficher("----------------------------------------");
         }
         #endregion

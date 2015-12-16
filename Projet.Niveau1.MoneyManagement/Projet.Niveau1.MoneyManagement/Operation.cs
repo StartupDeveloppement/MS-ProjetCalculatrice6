@@ -21,7 +21,8 @@ namespace Projet.Niveau1.MoneyManagement
 
         public override string ToString()
         {
-            return dateOperation + "-" + montant;
+            string dateFormat = dateOperation.ToString("d");
+            return dateFormat + " d'un montant de: " + montant + " euros";
         }
 
         public override bool Equals(object obj)
