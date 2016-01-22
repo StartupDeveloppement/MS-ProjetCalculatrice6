@@ -10,26 +10,31 @@ namespace Projet.Niveau1.MoneyManagement
     {
         private DateTime dateOperation;
         private double montant;
-        private bool reguliere;
+        private bool regulier;
+        private string reguliere;
 
-        public Operation(DateTime date, double montant, bool reguliere)
+        public Operation(DateTime date, double montant, bool regulier)
         {
             dateOperation = date;
             this.montant = montant;
-            this.reguliere = reguliere;
+            this.regulier = regulier;
         }
 
         public override string ToString()
         {
             string dateFormat = dateOperation.ToString("d");
-            return dateFormat + " d'un montant de: " + montant + " euros";
+            if (regulier == true)
+            {
+                reguliere = "operation reguliere";
+            }
+            return dateFormat + " d'un montant de: " + montant + " euros " + reguliere;
         }
 
         public override bool Equals(object obj)
         {
             Operation demo = obj as Operation;
             return demo != null && (demo.montant == this.montant && demo.dateOperation == this.dateOperation &&
-                                    demo.reguliere == this.reguliere);
+                                    demo.regulier == this.regulier);
         }
 
         public void GetMontant()

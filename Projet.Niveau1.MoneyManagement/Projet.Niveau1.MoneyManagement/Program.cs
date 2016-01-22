@@ -123,9 +123,10 @@ namespace Projet.Niveau1.MoneyManagement
             DateTime dt2 = DateTime.Parse(date);
             string dateFormat = dt2.ToString("d");
             Affichage.Afficher("Montant de l'opération : ");
-            double montant = Convert.ToDouble(Console.ReadLine().Replace(".",",");
+            double montant = Convert.ToDouble(Console.ReadLine().Replace(".",","));
             Affichage.Afficher("Opération régulière (0 pour non, 1 pour oui)");
-            bool regulier = true;
+            int choix = Convert.ToInt16(Console.ReadLine());
+            bool regulier = Convert.ToBoolean(choix);
             Operation operationEnCours = new Operation(dt2, montant, regulier);
             _compteEnBanque.Add(operationEnCours);
         }
